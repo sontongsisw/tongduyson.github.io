@@ -219,7 +219,7 @@
                                                     <div class="col-sm-8 col-md-9">
                                                         <div class="meta">
                                                             <h3>Iterative learning control (ILC)</h3>
-															<p> brief introduction...</p>
+															<p> general introduction...</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -379,31 +379,32 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
                                                     <div class="col-sm-8 col-md-9">
                                                         <div class="meta">
                                                             <h3>Multivariable ILC in the frequency domain</h3>
-                                                            <p> automated design </p>
+                                                            <p> an automated design </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="details">
-													<p align="justify"> It is still a challenge to bring multivariable ILC to practical applications. The main reason is: most ILC algorithms in the literature rely on a two-step problem formulation (i.e. design learning function with the given Q-filter or vice versa) and the design procedures are usually heuristic. The parameter tuning steps are left to the designer. For example, a MIMO system (5x5) will require tuning for 50 functions, which is almost impossible.  </p>
+													<p align="justify"> It is still a challenge to bring multivariable ILC to practical applications. The main reason is: most ILC algorithms in the literature rely on a two-step problem formulation (i.e. design learning function with the given Q-filter or vice versa) and the design procedures are usually heuristic. The parameter tuning steps are left to the designer. For example, a MIMO system of 5 inputs and 5 outputs will require tuning for 50 functions, which is almost impossible.  </p>
 													<p align="justify"> In this research, an automated tuning design for MIMO ILC is proposed to solve all non-causal learning gains simultaneously: </>
 <BR><p><center>\(<br />
 \begin{align}
 \begin{array}{ll}
-\displaystyle\min_{Q(\mathrm{q}),\; L(\mathrm{q})} & \bar\sigma \big[{ Q (1 - L P)   }\big] \;\;(1)\\
-\text{subject to} & \bar\sigma \big[{ Q (1 - L P_\Delta)   }\big] < 1, \; \forall\Delta \in \mathcal{B}_{\Delta} \;\;(2)\\ 
-& \bar\sigma\big[{ W_{\mathrm{p}}\big({  I - P[I - Q(I - LP)]^{-1}QL}\big) }\big]\leq 1\;\;(3)\\ 
-& \bar\sigma \big[{ W_{\mathrm{u}} \big({  [I - Q(I - LP)]^{-1}QL }\big) }\big]  \leq 1\;\; (4).
+\displaystyle\min_{Q(\mathrm{q}),\; L(\mathrm{q})} & \bar\sigma \big[{ Q (1 - L P)   }\big], \; \forall \omega \;\;(1)\\
+\text{subject to} & \bar\sigma \big[{ Q (1 - L P_\Delta)   }\big] < 1, \; \forall\Delta \in \mathcal{B}_{\Delta},\; \forall \omega \;\;(2)\\ 
+& \bar\sigma\big[{ W_{\mathrm{p}}\big({  I - P[I - Q(I - LP)]^{-1}QL}\big) }\big]\leq 1, \; \forall \omega \;\;(3)\\ 
+& \bar\sigma \big[{ W_{\mathrm{u}} \big({  [I - Q(I - LP)]^{-1}QL }\big) }\big]  \leq 1, \; \forall \omega \;\; (4).
 \end{array}
 \end{align}
 <br />\)</center><BR>	                                                    
-                                                     <p align="justify"> Here,  (2) is the robust convergence condition, where both structured and unstructured uncertainty can be considered, (3) concerns tracking performance with the performance weight <span class="math">\(W_{\text{p}}(\mathrm{q})\) </span>. (4) is the input constraint and the objective (1) corresponds to the convergence speed. The controller is considered of both FIR and IIR filter type: </>
+                                                     <p align="justify"> Here,  (2) is the robust convergence condition, where both structured and unstructured uncertainty can be considered, (3) concerns tracking performance with the performance weight <span class="math">\(W_{\text{p}}(\mathrm{q})\) </span>. (4) is the input constraint and the objective (1) corresponds to the convergence speed. The controller is considered of both linearly parameterized FIR and IIR filter types based on orthogonal basis functions: </>
 <BR><p><center>\(<br />
 \begin{align}
-Q(\mathrm{q}) =  q_{0}\phi_{0}(\mathrm{q}) + q_{1}\phi_{1}(\mathrm{q})  + \ldots+ q_{n}\phi_{n}(\mathrm{q}) , \nonumber\\ 
-\hat{L}(\mathrm{q})  =  \hat{l}_{0}\varphi_{0}(\mathrm{q}) +\hat{l}_{1}\varphi_{1}(\mathrm{q}) +\ldots+ \hat{l}_{m}\varphi_{m}(\mathrm{q}),
+Q(\mathrm{q}) &=  q_{0}\phi_{0}(\mathrm{q}) + q_{1}\phi_{1}(\mathrm{q})  + \ldots+ q_{n}\phi_{n}(\mathrm{q}) , \nonumber\\ 
+\hat{L}(\mathrm{q})  &=  \hat{l}_{0}\varphi_{0}(\mathrm{q}) +\hat{l}_{1}\varphi_{1}(\mathrm{q}) +\ldots+ \hat{l}_{m}\varphi_{m}(\mathrm{q}),
 \end{align}
 <br />\)</center><BR>								
-													<p> The proposed design is formulated as a convex problem of <span class="math">\(Q(\mathrm{q})\) </span> and <span class="math">\(\hat{L}(\mathrm{q})  = \hat{Q}(\mathrm{q}){L}(\mathrm{q})\) </span> and the controller gains are guaranteed global solution and solved efficiently.
+													<p align="justify"> The proposed design is formulated as a convex problem of <span class="math">\(Q(\mathrm{q})\) </span> and <span class="math">\(\hat{L}(\mathrm{q})  = {Q}(\mathrm{q}){L}(\mathrm{q})\) </span> and the controller gains are guaranteed global solution and solved efficiently.
+													<p align="justify"> I am currently trying to furthur this research.  
 												</div>
 
 												</li>
