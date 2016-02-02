@@ -174,20 +174,29 @@
 										<BR>
 <!-- 										<p align="justify"> After more than 6 years working in the field of automatic control, I have gained a broad knowledge in many aspects of control theory (linear and nonlinear control, robust control, optimal control...), control design techniques (PID, loop-shaping, mu-synthesis, MIMO control....), and numerical optimization (convex optimization, LMI,...). </p>
 										<p align="justify"> As a control engineer, I am very skilled with MATLAB as it is the most ubiquitous software for matrix calculations and algebra. I have also gained experience with real-time implementation (i.e. dSPACE, Simulink) of control implementation and system identification.   </p>
- -->										<p align="justify"> My PhD thesis focus on iterative learning control, a control method that improves tracking performance of repetitive systems (automation, manufacturing, batch process,...). The research topics are the following:  </p>
+ -->
+										<p align="justify"> My PhD thesis focus on iterative learning control, a control method that improves tracking performance of repetitive systems (automation, manufacturing, batch process,...). The research topics are the following:  </p>
 										</div>
                                     <div class="col-md-4">
                                         <div class="subtitle text-center">
-                                            <h3>Interests</h3>
+                                            <h3>Research Topics</h3>
                                         </div>
                                         <ul class="ul-boxed list-unstyled">
-                                            <li>Control theory and applications</li>
+                                            <li><a href="#topic1">Iterative learning control (ILC) </a> </li>
+                                            <li><a href="#topic2">Robust norm-optimal ILC  </a> </li>
+                                            <li><a href="#topic3">Multi-objecitve ILC </a> </li>
+                                            <li><a href="#topic4">Lifted-system representation ILC </a> </li>
+                                            <li><a href="#topic5">Loop shaping feedback control </a> </li>
+                                            <li><a href="#topic6">Multivariable ILC </a> </li>
+                                        </ul>
+<!-- 										 <ul class="ul-boxed list-unstyled">
+                                            <li>Control theory and applications </li>
                                             <li>Mechatronic systems</li>
                                             <li>Precision motion control</li>
 											<li>Autonomous vehicles</li>
 											<li>Control for manufacturing</li>
 											<li>Optimization</li>
-                                        </ul>
+                                        </ul> -->
                                     </div>
                                 </div>
                             </div>
@@ -216,7 +225,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-8 col-md-9">
+                                                    <div class="col-sm-8 col-md-9" id="topic1">
                                                         <div class="meta">
                                                             <h3>Iterative learning control (ILC)</h3>
 															<p> general introduction...</p>
@@ -251,7 +260,7 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-8 col-md-9">
+                                                    <div class="col-sm-8 col-md-9" id="topic2">
                                                         <div class="meta">
                                                             <h3>Robust convergent norm-optimal ILC </h3>
 															<p> with overhead crane application</p>
@@ -271,6 +280,9 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
 												<BR><center> <img alt="image" src="img/lab/normILC.jpg" alt="Smiley face"  height="220" width="400"> </center>
 												<BR>
 												<p align="justify"> The proposed robust ILC design is  experimentally validated on a lab scale overhead crane system, showing the advantages of the approach over classical ILC designs in monotonic convergence and tracking performance.  </p>
+												<p> <ins>References: </ins></p>
+												<p> <small>Tong Duy, S., Pipeleers, G., Swevers, J., "Robust Monotonic Convergent Iterative Learning Control", <i> IEEE Transaction on Automatic Control </i>, Issue 99, July  2015 </small></p>
+												<p> <small>Tong Duy, S., Pipeleers, G., Swevers, J., "Experimental Validation of Robust Iterative Learning Control on an Overhead Crane Test Setup", <i> The 19th World Congress of the International Federation of Automatic Control (IFAC14)</i>, Cape Town, Aug. 2014 </small></p> 												
 												</div>
                                             </li>
                                             <li>
@@ -284,7 +296,7 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-8 col-md-9">
+                                                    <div class="col-sm-8 col-md-9" id="topic3">
                                                         <div class="meta">
                                                             <h3>Multi-objecitve ILC</h3>
                                                             <p> robust convergence, tracking performance, convergence rate, and input constraint</p>
@@ -308,6 +320,9 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
 												<BR>
 												   <p align="justify">  The figure show the trade-off curve with different converged error performance weighting function <span class="math">\(W_{\text{p}}(\mathrm{q})\) </span> and uncertainty weighting function <span class="math">\(W(\mathrm{q})\) </span>. </p>
 												   <p align="justify"> This work provides an effiient automated method for tuning ILC controller, and readily extended in many ways (i.e. model structure, ILC structure). </p>
+												<p> <ins>References: </ins></p>
+												<p> <small>Tong Duy, S., Pipeleers, G., Swevers, J., "Multi-objective Iterative Learning Control using Convex Optimization", <i> European Journal of Control (submitted) </i> </small></p>
+								
 												</div>
                                             </li>
                                             <li>
@@ -321,7 +336,7 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-8 col-md-9">
+                                                    <div class="col-sm-8 col-md-9" id="topic4">
                                                         <div class="meta">
                                                             <h3>Lifted-system representation ILC </h3>
                                                             <p> analysis and design </p>
@@ -337,7 +352,10 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
                                                     <p align="justify"> The results are validated numerically and experimentally on an XY-Table setup in the lab (collaboration with my colleague Armin Steinhauser).  </p>																																						
 												    <img alt="image" src="img/lab/liftILC.jpg"  class="img-responsive" height="250" width="650">
 													<p align="justify"> Tracking error norm in the trial domain (left) and tracking error in the time domain (trial 2(red), trial 3(blue), trial 25 (green)  </p>																																						
-
+													<p> <ins>References: </ins></p>
+													<p> <small>Tong Duy, S., Pipeleers, G., Swevers, J., "Robust Analysis and Synthesis with Unstructured Model Uncertainty in Lifted System ILC", <i> 2015 American Control Conference (ACC15), </i>, Chicago, IL, Jun. 2015 </small></p> 												
+													<p> <small>Tong Duy, S., Steinhauser, A., Pipeleers, G., Swevers, J., "Robust performance iterative learning control : Analysis, synthesis and experimental Validation", <i> The European Control Conference (ECC16) (submitted) </i>, Aalborg, Jul. 2016 </small></p> 												
+ 
 												</div>
                                             </li>
                                             <li>
@@ -351,7 +369,7 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-8 col-md-9">
+                                                    <div class="col-sm-8 col-md-9" id="topic5">
                                                         <div class="meta">
                                                             <h3>Mixed-sensitivity loop shaping feedback control</h3>
                                                             <p> with amplified piezo actuator (APA500L) application </p>
@@ -376,7 +394,7 @@ u_{j+1}(k) = Q(\mathrm{q})\left[{u_{j}(k) + L(\mathrm{q})e_{j}(k+1) }\right],
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-8 col-md-9">
+                                                    <div class="col-sm-8 col-md-9" id="topic6">
                                                         <div class="meta">
                                                             <h3>Multivariable ILC in the frequency domain</h3>
                                                             <p> an automated design </p>
